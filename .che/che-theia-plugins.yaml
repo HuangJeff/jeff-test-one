@@ -1,0 +1,4 @@
+- id: redhat/java/latest
+  override:
+    preferences:
+      java.jdt.ls.vmargs: '-javaagent:/lombok.jar'

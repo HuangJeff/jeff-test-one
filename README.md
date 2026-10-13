@@ -1,8 +1,19 @@
-# Example of the use of Lombok Project
-## Lombok Proyect is an open source library for Java that helps reuse repetitive code through annotations
-### Find at modelpackage examples of POJOs with and without Lombok, find at Test folder, test methods that ilustrate how lombok behaves.
+# jeff-test-one
 
-#### Find Lombok Project official documentation at: https://projectlombok.org/
-#### You can see a small tutorial of Lombok Proyect an other Java libraries (in spanish) at: https://codesolt.com/tutoriales/
+這是我的測試區，用來測試專案建立、寫程式等相關練習。
 
-Feel free to reach me at: carlos.salazar@codesolt.com or find out more about me at: https://carlos-salazar.com/ :)
+## Java 練習
+
+1. HelloWorld.java
+
+## Lombok Project 範例說明
+
+Lombok 是一個開源的 Java 程式庫，透過註解減少重複性的程式碼。
+
+本專案包含使用與未使用 Lombok 的 POJO 範例，以及示範 Lombok 行為的測試方法。
+
+Lombok 官方文件：https://projectlombok.org/
+
+原始範例的西班牙文教學：https://codesolt.com/tutoriales/
+
+原始範例作者：https://carlos-salazar.com/

@@ -30,20 +30,28 @@ GitHub 裝置驗證：完成 VS Code - Open Source 的 GitHub 登入授權。
 Git 推送：成功將本機 master 推送至 GitHub 的 main。
 
 將 README.md 標記為已解決
+
 > git add README.md
+
 完成合併提交
 如果 git status 顯示衝突已解決，而且沒有其他未解決的衝突，就輸入：
+
 > git commit -m "中文字也可以唷，Merge GitHub README with Lombok project"
+
 這會建立一筆合併提交，將本機 master 與 GitHub main 的歷史接合起來。
 
 先確認分支與遠端設定
 完成提交後，請輸入：
+
 > git status
+
 再輸入
+
 > git remote -v
 
 推送到 GitHub
 因為你目前的本機分支叫 master，而 GitHub 的分支叫 main，我們可以明確指定把本機 master 推送到遠端 main。
+
 > git push origin master:main
 
 ------------------
@@ -58,10 +66,15 @@ Git 推送：成功將本機 master 推送至 GitHub 的 main。
 
 1.推送完成後，確認是否同步
 如果上一步顯示推送成功，請再輸入：
+
 > git fetch origin
+
 接著輸入：
+
 > git status
+
 最後輸入：
+
 > git log -3 --oneline --graph --decorate
 
 

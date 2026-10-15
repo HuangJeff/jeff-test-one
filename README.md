@@ -77,5 +77,77 @@ Git 推送：成功將本機 master 推送至 GitHub 的 main。
 
 > git log -3 --oneline --graph --decorate
 
+Git 上傳流程
+記住這三個關鍵字就好：
+- add：準備要提交的修改。
+- commit：把修改記錄在本機 Git。
+- push：把已提交的版本上傳到 GitHub。
+
+step1. 確認修改了哪些檔案
+
+> git status
+
+step2. 把修改加入提交清單
+
+> git add .
+
+    [
+    如果只想提交特定檔案，也可以指定檔案路徑：
+    > git add src/main/java/.../Main.java
+    ]
+
+step3. 建立版本紀錄
+(這時候修改就已經記錄在本機，但還沒有上傳到 GitHub。)
+
+> git commit -m "Update Java program. 可以打中文。"
+
+step4. 上傳到 GitHub
+你之前的 Git 專案曾使用 master 分支，但我們先確認目前分支與遠端設定：
+
+> git branch --show-current
+> git remote -v
+
+如果確認目前分支是 master，遠端名稱是 origin，而且 GitHub 上對應的分支也是 master，就輸入：
+
+> git push origin master
+
+如果目前分支其實是 main，就改成：
+
+> git push origin main
+
+如果系統要求 GitHub 登入或驗證，就依照提示完成即可。
+
+step 5. 最後確認有沒有上傳成功
+
+> git status
+
+⓪ 以後每次修改程式，只要記住這組指令
+
+[
+    git status
+    git add .
+    git commit -m "描述這次修改"
+    git push
+]
+其中 git push 可以直接使用的前提是，你的本機分支已經設定好追蹤的遠端分支。
+小提醒： 如果你和其他裝置也會修改同一個 GitHub 專案，推送前可能需要先執行 git pull，避免遠端有更新而造成衝突。
+
+
+Maven 標準目錄結構
+
+my-app/                      # 專案根目錄
+├── pom.xml               # Maven 專案核心配置文件
+├── src/                  # 所有專案原始碼與資源檔
+│   ├── main/            # 主程式相關檔案
+│   │   ├── java/       # Java 原始程式碼 (.java)
+│   │   ├── resources/  # 主程式設定檔（application.properties, xml等）
+│   │   └── webapp/     # Web 專案的 JSP / HTML / 靜態資源 (選用)
+│   ├── test/            # 單元測試相關檔案
+│   │   ├── java/       # 測試程式碼 (.java)
+│   │   └── resources/  # 測試用設定檔
+│   └── site/            # Maven Site 文件與報告設定
+└── target/     # 建置（Build）輸出的目錄（編譯後的 .class、打包後的 .jar / .war 會放在這裡）
+
+
 
 

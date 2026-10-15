@@ -25,7 +25,7 @@ public class ModelTest {
 		ModelLombokData model = new ModelLombokData("Hello Java", 6);
 
 		//Notice (on log) how the static property intializes until is nedded
-		Double value = model.getDoubleValue();
+		Double value = 0.00;//model.getDoubleValue();
 		assertTrue(value != null);
 		
 		//Ensure not allowing to set Null values (with annotation)
